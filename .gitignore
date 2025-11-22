@@ -9,3 +9,4 @@ Makefile
 .clangd/
 compile_commands.json
 CMakeCache.txt
+.DS_Store
