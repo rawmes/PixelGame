@@ -71,7 +71,7 @@ namespace sfs
 		}internal = {};
 	};
 
-#elif defined __linux__
+#elif defined __linux__ || defined __APPLE__
 
 	struct FileMapping
 	{

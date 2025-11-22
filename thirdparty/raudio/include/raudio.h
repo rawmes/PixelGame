@@ -79,10 +79,7 @@
 //----------------------------------------------------------------------------------
 #ifndef __cplusplus
 // Boolean type
-    #if !defined(_STDBOOL_H)
-        typedef enum { false, true } bool;
-        #define _STDBOOL_H
-    #endif
+    #include <stdbool.h>
 #endif
 
 // Wave type, defines audio wave data
