@@ -15,7 +15,7 @@ struct GameplayData{
 	glm::vec2 playerPos = {0, 0};
 };
 
-GameplayData gamplayData;
+GameplayData gameplayData;
 
 gl2d::Texture spaceshipTexture;
 gl2d::Texture backgroundTexture;
@@ -28,6 +28,9 @@ bool initGame()
 	//initializing stuff for the renderer
 	gl2d::init();
 	renderer.create();
+
+	spaceshipTexture.loadFromFile(RESOURCES_PATH "spaceShip/ships/green.png", true);
+	backgroundTexture.loadFromFile(RESOURCES_PATH "background1.png", true);
 	
 	return true;
 }
@@ -46,18 +49,12 @@ bool gameLogic(float deltaTime)
 
 	renderer.updateWindowMetrics(w, h);
 #pragma endregion
-
-
-
-	renderer.renderRectangle({100,100, 100, 100}, Colors_Blue);
-
-
+	
+	renderer.renderRectangle({ gameplayData.playerPos, 100, 100}, Colors_Blue);
+	
 	renderer.flush();
-
-
+	
 	//ImGui::ShowDemoWindow();
-
-
 	return true;
 #pragma endregion
 

@@ -5,3 +5,7 @@ build/
 .idea/
 CMakeSettings.json
 Makefile
+.cache/
+.clangd/
+compile_commands.json
+CMakeCache.txt
